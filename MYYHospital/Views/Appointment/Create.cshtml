@@ -1,0 +1,49 @@
+﻿@model MYYHospital.ViewModel.AppointmentVM
+
+<h2>Add Appointment</h2>
+
+
+<form action="/Appointment/Create" method="post">
+
+    <p>
+        <label>DoctorName</label>
+        <select asp-for="DoctorId">
+    <option value="">Select-Item</option>
+            @foreach(var dc in Model.doctor)
+                {
+                <option value="@dc.DoctorId">@dc.Name</option>
+
+                }
+            </select>
+    </p>
+
+    <p>
+        <label>PatientName</label>
+        <select asp-for="PatientId">
+            <option value="">Select-Item</option>
+            @foreach (var dc in Model.patient)
+            {
+                <option value="@dc.PatientId">@dc.Name</option>
+
+            }
+        </select>
+    </p>
+
+    <p>
+        <label>Notes</label>
+        <input type="text" name="Notes" />
+    </p>
+
+    <p>
+        <label>Date</label>
+        <input type="datetime-local" name="Date" />
+    </p>
+
+    <button type="submit">Create</button>
+
+</form>
+
+    
+<a href="/Appointment/Index">Back</a>
+
+

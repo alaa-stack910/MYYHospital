@@ -1,0 +1,28 @@
+﻿@model List<MYYHospital.Models.Doctor>
+
+    <h2>Doctor</h2>
+    <a href="/Doctor/Create">Add Doctor</a>
+<a href="/Doctor/Search">Search</a>
+
+
+@foreach(var dc in Model)
+{
+    <p>
+        <strong>ID:</strong>@dc.DoctorId
+    </p>
+
+    <p>
+        <strong>Name:</strong>@dc.Name
+    </p>
+    <p>
+        <strong>Specialty:</strong>@dc.Specialty
+    </p>
+
+    <a href="/Doctor/Edit/@dc.DoctorId">Edit</a>
+    <a href="/Doctor/Details/@dc.DoctorId">Details</a>
+    <a href="/Doctor/Delete/@dc.DoctorId">Delete</a>
+
+    <br />
+    <hr />
+
+}

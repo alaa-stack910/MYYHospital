@@ -1,0 +1,28 @@
+﻿@model MYYHospital.Models.Appointment
+
+<h2>Details of Appointment</h2>
+
+    <p>
+        <strong>AppointmentId:</strong>@Model.AppointmentId
+    </p>
+    <p>
+        <strong>DoctorId:</strong>@Model.DoctorId
+    </p>
+    <p>
+    <strong>DoctorName:</strong>@Model.doctor.Name
+    </p>
+    <p>
+    <strong>PatientId:</strong>@Model.PatientId
+    </p>
+    <p>
+    <strong>PatientName:</strong>@Model.patient.Name
+    </p>
+
+    <p>
+    <strong>Notes:</strong>@Model.Notes
+    </p>
+    <p>
+    <strong>Date:</strong>@Model.Date
+    </p>
+
+<a href="/Appointment/Index">Back</a>

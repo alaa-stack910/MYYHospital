@@ -1,0 +1,25 @@
+﻿@model List<MYYHospital.Models.Doctor>
+
+<h2>Search Doctor</h2>
+
+
+<form action="/Doctor/Search" method="post">
+    
+    <input type="text" name="Name" placeholder="Enter the name" />
+    <button type="submit">Search</button>
+
+
+</form>
+
+<br />
+
+@foreach (var d in Model)
+{
+    <div>
+        <p>Id: @d.DoctorId</p>
+        <p>Name: @d.Name</p>
+        <p>Specialization: @d.Specialty</p>
+    </div>
+}
+
+<a href="/Doctor/Index">Back to Doctors</a>

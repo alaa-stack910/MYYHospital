@@ -1,0 +1,25 @@
+﻿@model MYYHospital.Models.Patient
+
+<h2>Edit Patient</h2>
+
+
+<form action="/Patient/Edit" method="post">
+    <input type="hidden" name="PatientId" value="@Model.PatientId" />
+    <p>
+        <label>Name</label>
+        <input type="text" name="Name" value="@Model.Name" />
+    </p>
+
+    <p>
+        <label>Age</label>
+        <input type="text" name="Age" value="@Model.Age" />
+    </p>
+
+    <button type="submit">Save Changes</button>
+
+</form>
+
+    
+<a href="/Patient/Index">Back</a>
+
+

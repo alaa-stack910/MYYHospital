@@ -1,0 +1,38 @@
+﻿@model List<MYYHospital.Models.Appointment>
+
+<h2>Appointment</h2>
+<a href="/Appointment/Create">Add Appointment</a>
+
+@foreach (var dc in Model)
+{
+    <p>
+        <strong>AppointmentId:</strong>@dc.AppointmentId
+    </p>
+    <p>
+        <strong>DoctorId:</strong>@dc.DoctorId
+    </p>
+    <p>
+        <strong>DoctorName:</strong>@dc.doctor.Name
+    </p>
+    <p>
+        <strong>PatientId:</strong>@dc.PatientId
+    </p>
+    <p>
+        <strong>PatientName:</strong>@dc.patient.Name
+    </p>
+
+    <p>
+        <strong>Notes:</strong>@dc.Notes
+    </p>
+    <p>
+        <strong>Date:</strong>@dc.Date
+    </p>
+
+    <a href="/Appointment/Edit/@dc.AppointmentId">Edit</a>
+    <a href="/Appointment/Details/@dc.AppointmentId">Details</a>
+    <a href="/Appointment/Delete/@dc.AppointmentId">Delete</a>
+
+    <br />
+    <hr />
+
+}
